@@ -9,10 +9,13 @@ Return k.
 
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int left = 0;
-        int right = nums.length;
-        for (int i = 0; i < nums.length; i++){
-            
+        int right = 1;  //double pointer method
+        for (int left = 1; left < nums.length; left++){
+            if (nums[left] != nums[left - 1]){  //if the nums at left is not equal to the element before, then we have a unique number
+                nums[right] = nums[left];   //in that case, move the unique element at right to left, or the second position in second case
+                right++;    //increment right so that the next unique element will be after the others
+            }
         }
+        return right;
     }
 }
