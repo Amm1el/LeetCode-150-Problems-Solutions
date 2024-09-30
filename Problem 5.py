@@ -1,1 +1,8 @@
-Switching to Python
+# Switching to Python
+
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
